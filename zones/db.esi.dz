@@ -1,0 +1,16 @@
+; esi.dz
+$TTL    604800
+$ORIGIN esi.dz.
+@       IN      SOA  ns1.esi.dz. esi.dz. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@	IN       NS  ns1.esi.dz.
+
+ns1 	IN	A	127.0.0.1
+
+cours	IN	A	 127.0.0.1
+
