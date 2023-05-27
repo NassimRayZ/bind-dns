@@ -1,14 +1,14 @@
 default_zone_db = "db.esi.dz"
 default_name = "cdn.esi.dz."
-nameserver= "127.0.0.1"
-zones= {
-            "adrar" : "127.0.0.1",
-            "alger" : "127.0.0.1",
-            "laghouat" : "127.0.0.1",
-            "constantine" : "127.0.0.1",
-            "oran" : "127.0.0.1",
+nameserver = "213.179.173.3"
+zones = {
+    "alger": "213.179.173.10",
+    "oran": "213.179.173.14",
+    "constantine": "213.179.173.18",
+    "laghouat": "213.179.173.22",
+    "adrar": "213.179.173.26",
 }
-template = '''
+template = """ 
 ; esi.dz
 $TTL    604800
 
@@ -25,8 +25,8 @@ $ORIGIN {}
 ns1 IN       A   {}
 
 @   IN  A  {}
-'''
+"""
 
 for zone, ipv4 in sorted(zones.items()):
-        with open("./{}.{}".format(default_zone_db,zone), "w+") as f:
-                    f.write(template.format(default_name, nameserver,  ipv4))
+    with open("./{}.{}".format(default_zone_db, zone), "w+") as f:
+        f.write(template.format(default_name, nameserver, ipv4))

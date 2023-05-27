@@ -8,9 +8,9 @@ $ORIGIN esi.dz.
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
 ;
-@	IN       NS  ns1.esi.dz.
+@          IN   NS ns1.esi.dz.
 
-ns1 	IN	A	127.0.0.1
+ns1        IN   A  213.179.173.3
 
-cours	IN	A	 127.0.0.1
+cours      IN   A  127.0.0.1
 
